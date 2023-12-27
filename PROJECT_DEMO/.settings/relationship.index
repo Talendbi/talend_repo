@@ -8,5 +8,9 @@
     "id" : "_Oo510KQ5Ee6owLOInSChzA",
     "version" : "Latest",
     "type" : "property"
+  }, {
+    "id" : "_Oo510KQ5Ee6owLOInSChzA - TEST_TABLE2",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 } ]
