@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_T-4oMKstEe6JSryS1z4uQA" name="basicColAnalysisTest" creationDate="2024-01-04T10:15:58.717-0800">
-  <taggedValue xmi:id="_T-4oMastEe6JSryS1z4uQA" tag="Status" value="development"/>
-  <taggedValue xmi:id="_T-4oMqstEe6JSryS1z4uQA" tag="Author" value="developer@company.com"/>
-  <taggedValue xmi:id="_T-4oM6stEe6JSryS1z4uQA" tag="Purpose"/>
-  <taggedValue xmi:id="_T-4oNKstEe6JSryS1z4uQA" tag="Description"/>
-  <taggedValue xmi:id="_T-4oNastEe6JSryS1z4uQA" tag="Version" value="0.1"/>
-  <context xmi:id="_T-4oNqstEe6JSryS1z4uQA"/>
-  <results xmi:id="_T-4oN6stEe6JSryS1z4uQA">
-    <resultMetadata xmi:id="_T-4oOKstEe6JSryS1z4uQA"/>
-  </results>
-  <parameters xmi:id="_T-4oOastEe6JSryS1z4uQA" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_T-4oMKstEe6JSryS1z4uQA" name="basicColAnalysisTest" creationDate="2024-01-04T10:15:58.717-0800" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/demo_ora_db_0.1.item#_dZL_cKstEe6JSryS1z4uQA"/>
+    <taggedValue xmi:id="_T-4oMastEe6JSryS1z4uQA" tag="Status" value="development"/>
+    <taggedValue xmi:id="_T-4oMqstEe6JSryS1z4uQA" tag="Author" value="developer@company.com"/>
+    <taggedValue xmi:id="_T-4oM6stEe6JSryS1z4uQA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_T-4oNKstEe6JSryS1z4uQA" tag="Description" value=""/>
+    <taggedValue xmi:id="_T-4oNastEe6JSryS1z4uQA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_dZI8IastEe6JSryS1z4uQA" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_dZI8IqstEe6JSryS1z4uQA" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_dZI8I6stEe6JSryS1z4uQA" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_dZRfAKstEe6JSryS1z4uQA" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_T-4oNqstEe6JSryS1z4uQA">
+      <connection href="../../metadata/connections/demo_ora_db_0.1.item#_XDiqYKQ6Ee6owLOInSChzA"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/demo_ora_db_0.1.item#_odWz5aRQEe6owLOInSChzA"/>
+    </context>
+    <results xmi:id="_T-4oN6stEe6JSryS1z4uQA">
+      <resultMetadata xmi:id="_T-4oOKstEe6JSryS1z4uQA"/>
+    </results>
+    <parameters xmi:id="_T-4oOastEe6JSryS1z4uQA" dataFilter="_dZStIKstEe6JSryS1z4uQA" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_dZI8IKstEe6JSryS1z4uQA" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_dZStIKstEe6JSryS1z4uQA" name="basicColAnalysisTest">
+    <ranges xmi:id="_dZTUMKstEe6JSryS1z4uQA">
+      <expressions xmi:id="_dZTUMastEe6JSryS1z4uQA">
+        <expression xsi:type="relational:TdExpression" xmi:id="_dZTUMqstEe6JSryS1z4uQA" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
