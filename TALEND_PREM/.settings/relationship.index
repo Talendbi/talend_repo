@@ -12,5 +12,13 @@
     "id" : "_v6RqgNT6Ee6uTfdQ72GLsQ - PRODUCTS",
     "version" : "Latest",
     "type" : "schema"
+  }, {
+    "id" : "_v6RqgNT6Ee6uTfdQ72GLsQ - REGIONS",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_v6RqgNT6Ee6uTfdQ72GLsQ - SALES",
+    "version" : "Latest",
+    "type" : "schema"
   } ]
 } ]
