@@ -226,7 +226,7 @@
       <column comment="" key="false" length="38" name="REGION_ID" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="38" name="TOTAL_PRICE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="TOTAL_PRICE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="26" name="REGION_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -242,7 +242,7 @@
         <mapperTableEntries expression="row1.PRICE " name="PRICE" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row2.SALE_ID " name="SALE_ID" nullable="true" type="id_BigDecimal"/>
         <mapperTableEntries expression="row2.REGION_ID " name="REGION_ID" nullable="true" type="id_BigDecimal"/>
-        <mapperTableEntries expression="row2.TOTAL_PRICE " name="TOTAL_PRICE" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row2.TOTAL_PRICE " name="TOTAL_PRICE" nullable="true" type="id_Integer"/>
         <mapperTableEntries expression="row3.REGION_NAME " name="REGION_NAME" nullable="true" type="id_String"/>
       </outputTables>
       <inputTables columnNameFilter="" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
@@ -486,7 +486,7 @@
       <column comment="" key="false" length="38" name="REGION_ID" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="38" name="TOTAL_PRICE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="TOTAL_PRICE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="26" name="REGION_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -542,7 +542,7 @@
       <column comment="" key="false" length="38" name="REGION_ID" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" key="false" length="38" name="TOTAL_PRICE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+      <column comment="" key="false" length="38" name="TOTAL_PRICE" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="26" name="REGION_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
@@ -575,13 +575,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bf817bbd-f5ef-491f-a337-b5bf8309aa04"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>a6v542J09HzfGUYCpdaObObl9Ct4xyKsMDWAydUlM0utr0R5OxJ7EU7d6+qjRHU7nOht6bDbOt/x&#13;
-R3kqBslPDw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_be428ac6-ccca-4923-a66b-5db33389fd3f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BCP3HDtjdD59Pk7Zs6GHldDI4C0om2p5lBx8dPP7XK86VNlzZ6TIh41nezMQbv75DpzX0S1e62hQ&#13;
-NCmZsxCtAg==</DigestValue></Reference></SignedInfo><SignatureValue>enBR+d5OszET/IUlfIBsCI9uLLvvU1mTfLz/ZnVvdd01C0IeSG98w5l41LXt4RYIICvvYTW+NmCf&#13;
-n/bjjJu6xqWN5M8yPj8bVsRntz1knfSkRCq+xxXVEOMgkEZJvEFoHStlfHoeoxU5WO0El/Zw0stl&#13;
-PLnBAam5Ej5ueKsOMGMYA2vi5wNaguCAht6mtQMxRMgmRqC0veajDwUj+13TNRKuA08QtPuXgLfr&#13;
-N6Vv9jjhAcy8zNFMFCC26hpNzf8doqtKvqHNGo2eA1LaYBUSETVW+ksRhZlXAy/tGUw/nz+pHCjh&#13;
-S7xWCelENbDSy06X6yM3nlCJ9WEpCz5XJFfjDQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_68e8ce17-d9ab-4735-bb27-734f2a835ce9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>No1cSfMnJLvtUXNJ1K59xssskcuT5/x+Lh421voZPja3HHhZwiYvupRW+kxx2a/oNtDz6U+Pbyhb&#13;
+qS2MQY0RHw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6ce1ad2e-7f0c-4455-996e-cea6ce2e3a36"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>B0WBaEDaanzR8scqeqAwpxcdeDh9VpQtgwQzVOpJP+AXdNRvRwKIxxEHIw8fH3tyPrZx0jXE4hOp&#13;
+WCC8V0xIQA==</DigestValue></Reference></SignedInfo><SignatureValue>hQ6IVxxNVouAE4KSsQHKxdfWxzaktSs/4IMOXBkvLU6eCB45uHX2xRRVI8W4lVz0xRRTrzNEickL&#13;
+09bNkAzbC3K2bVpqdiSjrUx3biahi14evy6oEs3oAFMzMw4DQo6+HLuttC7n6y9yAWD8HXZNBtSl&#13;
+VHLgOjn3TNXaGLe/Ut+fCweUaAE9bhiSFbL1K7j0+2UmsZlOJLL+bVcA8ZBK8LA520sDtMvGZdN7&#13;
+q58qagQ6YrwOzXE2Pao1yRnh3hiD+SJDUwFFXx43jtEN3zdfGKnyMlye57YXloducnNQZ6zs82gv&#13;
+A1mqJTXjmTzthqJW3NklHxyeNUxxdARR92XAmg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -603,4 +603,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_be428ac6-ccca-4923-a66b-5db33389fd3f" Target="#_bf817bbd-f5ef-491f-a337-b5bf8309aa04"><Timestamp>2024-02-27 09:01:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6ce1ad2e-7f0c-4455-996e-cea6ce2e3a36" Target="#_68e8ce17-d9ab-4735-bb27-734f2a835ce9"><Timestamp>2024-02-27 09:02:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
