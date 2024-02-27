@@ -456,31 +456,33 @@
   <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="544" posY="192">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tAggregateRow_1"/>
     <elementParameter field="TABLE" name="GROUPBYS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="REGION_NAME"/>
-      <elementValue elementRef="INPUT_COLUMN" value="REGION_NAME"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="PRODUCT_NAME"/>
-      <elementValue elementRef="INPUT_COLUMN" value="PRODUCT_NAME"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="REGION_ID"/>
+      <elementValue elementRef="INPUT_COLUMN" value="REGION_ID"/>
     </elementParameter>
     <elementParameter field="TABLE" name="OPERATIONS">
-      <elementValue elementRef="OUTPUT_COLUMN" value="PRICE"/>
-      <elementValue elementRef="FUNCTION" value="sum"/>
-      <elementValue elementRef="INPUT_COLUMN" value="PRICE"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="PRODUCT_ID"/>
       <elementValue elementRef="FUNCTION" value="min"/>
       <elementValue elementRef="INPUT_COLUMN" value="PRODUCT_ID"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="PRODUCT_NAME"/>
+      <elementValue elementRef="FUNCTION" value="min"/>
+      <elementValue elementRef="INPUT_COLUMN" value="PRODUCT_NAME"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="PRICE"/>
+      <elementValue elementRef="FUNCTION" value="min"/>
+      <elementValue elementRef="INPUT_COLUMN" value="PRICE"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="SALE_ID"/>
       <elementValue elementRef="FUNCTION" value="min"/>
       <elementValue elementRef="INPUT_COLUMN" value="SALE_ID"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
-      <elementValue elementRef="OUTPUT_COLUMN" value="REGION_ID"/>
-      <elementValue elementRef="FUNCTION" value="min"/>
-      <elementValue elementRef="INPUT_COLUMN" value="REGION_ID"/>
-      <elementValue elementRef="IGNORE_NULL" value="false"/>
       <elementValue elementRef="OUTPUT_COLUMN" value="TOTAL_PRICE"/>
-      <elementValue elementRef="FUNCTION" value="min"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
       <elementValue elementRef="INPUT_COLUMN" value="TOTAL_PRICE"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="REGION_NAME"/>
+      <elementValue elementRef="FUNCTION" value="min"/>
+      <elementValue elementRef="INPUT_COLUMN" value="REGION_NAME"/>
       <elementValue elementRef="IGNORE_NULL" value="false"/>
     </elementParameter>
     <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
@@ -593,13 +595,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f483e79f-e897-4f84-92e2-687a76845dfe"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lP6zxh+9yVZGFFb8iFSqaeS8nn4C621vYDPvF4h/HNWk17YKlBbsTUg30lqOINGlBNKAjsKCS+e+&#13;
-chLEpG9WLA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5be2b0c4-b7b8-401b-a203-2551d926fe71"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WRhSmsH+aHM/7usaKxJELARJwl1daFIY1oVV1xmlK3tKcI/fD7G3fhDTXUygRo5ovJskl/djWU4o&#13;
-qSYjxETUOw==</DigestValue></Reference></SignedInfo><SignatureValue>CWEf0Kg2Dw6tFX2geuLFinqesPYrJxJm+upfJwNaVJtmQxN55LkQJLEaWks2q5m6twKD/I1bySWY&#13;
-crOTSf53erCgQbScLWMdrieS9famKxG9ZWFzTEteLKEiA/uSTdRGL3SE9rc1pNCY3/UzxzD8U7Qc&#13;
-ZuZISsFzLO9mmAgxtu5Dqcgro+tj/KDAyl+ZhSF0W6BRAqv71dfXkhxiOdjfTRntGPgnt5cUn4KI&#13;
-4sqDLkE+4p40HoBwAnR2xzopUztYH2ed8f2yL0atmWEASYT8zKinGxqVz0fjvMJzEzGnNw9PAq8M&#13;
-usq20HXRUDJckyAIjdjOv5e21WcN5cMwGuPejw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f5a19f4b-6338-4ec7-8fa2-a716bdcec755"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4c0AOn4gp+rxVPVCQc5Y++I5jV8twU1OIora1qB+L1UCQLiSr1Zmsae0yiyVmdPKLS0B7EqQJ713&#13;
+Akh77UaO6A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_045c21c8-f3aa-4e4a-b2ea-bad324e65296"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>K2tnJADlT7NN3xRxNAJ45tRs8xbcLsrKNHAO0S8CAW5q2MfrxnWdG481iDXLKLZLOpx/iwiclSnH&#13;
+0gvdd9oCBA==</DigestValue></Reference></SignedInfo><SignatureValue>AeR/zTKO7KG9veprSmRMA7c1z8KnFO/EaUYuvNqi7KVIy6aVf86rnwdbIOH5VDXejKuWxyJInnW8&#13;
+4mh8M8fP3thsdVMJGegvpbgmqyL9e8qbmbdhdCatxBFjfoxSsMgyRigEN5MdC1BOo5sGUDVqRKav&#13;
+s4LYewmP2EMIE7h8GKIFvxuNlFl6xGkRUNlmfUZvUcOuvBYCKcXyC3V4yPd1Bp6FfOgoV8cmIExn&#13;
+9l0NODQyjictLSAu5yeMspqr/nrCSMKVqaEDogo/KV0REVpR/z6z63ulrvCaT8BLr+sIdpat1jbY&#13;
+EQBp/R2MDNFa0oqb+Iex0km6r457zX7cQ3sDGw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -621,4 +623,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5be2b0c4-b7b8-401b-a203-2551d926fe71" Target="#_f483e79f-e897-4f84-92e2-687a76845dfe"><Timestamp>2024-02-27 08:51:21</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_045c21c8-f3aa-4e4a-b2ea-bad324e65296" Target="#_f5a19f4b-6338-4ec7-8fa2-a716bdcec755"><Timestamp>2024-02-27 08:54:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
