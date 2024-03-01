@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_E3914NfvEe6W3qq2lX1hOQ" name="Ma1" creationDate="2024-03-01T09:13:50.669-0800">
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_E3914NfvEe6W3qq2lX1hOQ" name="Ma1" creationDate="2024-03-01T09:13:50.669-0800" defaultContext="Default">
+  <clientDependency href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_Lqt8ENfvEe6W3qq2lX1hOQ"/>
   <taggedValue xmi:id="_E3-c8NfvEe6W3qq2lX1hOQ" tag="PREVIEW_ROW_NUMBER" value="10000"/>
   <taggedValue xmi:id="_E3-c8dfvEe6W3qq2lX1hOQ" tag="Status" value="development"/>
   <taggedValue xmi:id="_E3-c8tfvEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
-  <taggedValue xmi:id="_E3-c89fvEe6W3qq2lX1hOQ" tag="Purpose"/>
-  <taggedValue xmi:id="_E3-c9NfvEe6W3qq2lX1hOQ" tag="Description"/>
+  <taggedValue xmi:id="_E3-c89fvEe6W3qq2lX1hOQ" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_E3-c9NfvEe6W3qq2lX1hOQ" tag="Description" value=""/>
   <taggedValue xmi:id="_E3-c9dfvEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
-  <context xmi:id="_E3-c9tfvEe6W3qq2lX1hOQ"/>
+  <taggedValue xmi:id="_LkyTMNfvEe6W3qq2lX1hOQ" tag="TEMP_DATA_DIR" value=""/>
+  <taggedValue xmi:id="_LkyTMdfvEe6W3qq2lX1hOQ" tag="MAX_BUFFER_SIZE" value="200000"/>
+  <taggedValue xmi:id="_LkyTMtfvEe6W3qq2lX1hOQ" tag="STORE_ON_DISK" value="false"/>
+  <taggedValue xmi:id="_Lk7dINfvEe6W3qq2lX1hOQ" tag="DRILL_DOWN" value="true"/>
+  <taggedValue xmi:id="_LqqRsdfvEe6W3qq2lX1hOQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <context xmi:id="_E3-c9tfvEe6W3qq2lX1hOQ">
+    <connection href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#__ATI8NZvEe6_lrqJSTp5Zg"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_F4Nb8NZwEe6_lrqJSTp5Zg"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_F4Nb9NZwEe6_lrqJSTp5Zg"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_F4Nb-NZwEe6_lrqJSTp5Zg"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_F4Nb_NZwEe6_lrqJSTp5Zg"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_F4NcANZwEe6_lrqJSTp5Zg"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_F4NcBNZwEe6_lrqJSTp5Zg"/>
+  </context>
   <results xmi:id="_E3-c99fvEe6W3qq2lX1hOQ">
     <resultMetadata xmi:id="_E3-c-NfvEe6W3qq2lX1hOQ"/>
     <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_E3_EANfvEe6W3qq2lX1hOQ"/>
     <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_E3_EAdfvEe6W3qq2lX1hOQ">
-      <builtInMatchRuleDefinition xmi:id="_E3_EAtfvEe6W3qq2lX1hOQ"/>
+      <builtInMatchRuleDefinition xmi:id="_E3_EAtfvEe6W3qq2lX1hOQ">
+        <matchRules xmi:id="_LhYZ4NfvEe6W3qq2lX1hOQ" name="Match Rule 1"/>
+      </builtInMatchRuleDefinition>
     </indicators>
   </results>
   <parameters xmi:id="_E3_EA9fvEe6W3qq2lX1hOQ" analysisType="Match Analysis"/>
+  <contextType xmi:id="_LqqRsNfvEe6W3qq2lX1hOQ" confirmationNeeded="false" hide="false" name="Default"/>
 </dataquality.analysis:Analysis>
