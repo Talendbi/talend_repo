@@ -1,13 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_PpPK0NgVEe6W3qq2lX1hOQ" name="ca_demo_customers" creationDate="2024-03-01T13:47:04.006-0800">
-  <taggedValue xmi:id="_PpPK0dgVEe6W3qq2lX1hOQ" tag="Status" value="development"/>
-  <taggedValue xmi:id="_PpPK0tgVEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
-  <taggedValue xmi:id="_PpPK09gVEe6W3qq2lX1hOQ" tag="Purpose"/>
-  <taggedValue xmi:id="_PpPK1NgVEe6W3qq2lX1hOQ" tag="Description"/>
-  <taggedValue xmi:id="_PpPK1dgVEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
-  <context xmi:id="_PpPK1tgVEe6W3qq2lX1hOQ"/>
-  <results xmi:id="_PpPK19gVEe6W3qq2lX1hOQ">
-    <resultMetadata xmi:id="_PpPK2NgVEe6W3qq2lX1hOQ"/>
-  </results>
-  <parameters xmi:id="_PpPK2dgVEe6W3qq2lX1hOQ" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_PpPK0NgVEe6W3qq2lX1hOQ" name="ca_demo_customers" creationDate="2024-03-01T13:47:04.006-0800" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_Lqt8ENfvEe6W3qq2lX1hOQ"/>
+    <taggedValue xmi:id="_PpPK0dgVEe6W3qq2lX1hOQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_PpPK0tgVEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
+    <taggedValue xmi:id="_PpPK09gVEe6W3qq2lX1hOQ" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_PpPK1NgVEe6W3qq2lX1hOQ" tag="Description" value=""/>
+    <taggedValue xmi:id="_PpPK1dgVEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_Pv0T8dgVEe6W3qq2lX1hOQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_Pv0T8tgVEe6W3qq2lX1hOQ" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_Pv07ANgVEe6W3qq2lX1hOQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_Pv07AtgVEe6W3qq2lX1hOQ" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_PpPK1tgVEe6W3qq2lX1hOQ">
+      <connection href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#__ATI8NZvEe6_lrqJSTp5Zg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_I9OmANgVEe6W3qq2lX1hOQ"/>
+    </context>
+    <results xmi:id="_PpPK19gVEe6W3qq2lX1hOQ">
+      <resultMetadata xmi:id="_PpPK2NgVEe6W3qq2lX1hOQ"/>
+    </results>
+    <parameters xmi:id="_PpPK2dgVEe6W3qq2lX1hOQ" dataFilter="_QBxmoNgVEe6W3qq2lX1hOQ" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_Pv0T8NgVEe6W3qq2lX1hOQ" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_QBxmoNgVEe6W3qq2lX1hOQ" name="ca_demo_customers">
+    <ranges xmi:id="_QBxmodgVEe6W3qq2lX1hOQ">
+      <expressions xmi:id="_QBxmotgVEe6W3qq2lX1hOQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_QBxmo9gVEe6W3qq2lX1hOQ" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
