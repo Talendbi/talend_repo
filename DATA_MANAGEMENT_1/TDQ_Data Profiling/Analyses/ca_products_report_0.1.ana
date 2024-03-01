@@ -1,13 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:dataquality.analysis="http://dataquality.analysis" xmi:id="_H0qLUNgBEe6W3qq2lX1hOQ" name="ca_products_report" creationDate="2024-03-01T11:23:01.386-0800">
-  <taggedValue xmi:id="_H0qLUdgBEe6W3qq2lX1hOQ" tag="Status" value="development"/>
-  <taggedValue xmi:id="_H0qLUtgBEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
-  <taggedValue xmi:id="_H0qLU9gBEe6W3qq2lX1hOQ" tag="Purpose"/>
-  <taggedValue xmi:id="_H0qLVNgBEe6W3qq2lX1hOQ" tag="Description"/>
-  <taggedValue xmi:id="_H0qLVdgBEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
-  <context xmi:id="_H0qLVtgBEe6W3qq2lX1hOQ"/>
-  <results xmi:id="_H0qLV9gBEe6W3qq2lX1hOQ">
-    <resultMetadata xmi:id="_H0qLWNgBEe6W3qq2lX1hOQ"/>
-  </results>
-  <parameters xmi:id="_H0qLWdgBEe6W3qq2lX1hOQ" analysisType="Multiple Column Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators="http://dataquality.indicators" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_H0qLUNgBEe6W3qq2lX1hOQ" name="ca_products_report" creationDate="2024-03-01T11:23:01.386-0800" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_Lqt8ENfvEe6W3qq2lX1hOQ"/>
+    <taggedValue xmi:id="_H0qLUdgBEe6W3qq2lX1hOQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_H0qLUtgBEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
+    <taggedValue xmi:id="_H0qLU9gBEe6W3qq2lX1hOQ" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_H0qLVNgBEe6W3qq2lX1hOQ" tag="Description" value=""/>
+    <taggedValue xmi:id="_H0qLVdgBEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_H7aTkdgBEe6W3qq2lX1hOQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_H7aTktgBEe6W3qq2lX1hOQ" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_H7a6oNgBEe6W3qq2lX1hOQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <taggedValue xmi:id="_H7cv0NgBEe6W3qq2lX1hOQ" tag="Is Use Sample Data" value="false"/>
+    <context xmi:id="_H0qLVtgBEe6W3qq2lX1hOQ">
+      <connection href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#__ATI8NZvEe6_lrqJSTp5Zg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeN5UNZwEe6_lrqJSTp5Zg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgY9ZwEe6_lrqJSTp5Zg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgZ9ZwEe6_lrqJSTp5Zg"/>
+    </context>
+    <results xmi:id="_H0qLV9gBEe6W3qq2lX1hOQ">
+      <resultMetadata xmi:id="_H0qLWNgBEe6W3qq2lX1hOQ"/>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_H7a6odgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6otgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeN5UNZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_H7a6o9gBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6pNgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeN5UNZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_H7a6pdgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6ptgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeN5UNZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_H7a6p9gBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6qNgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeN5UNZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_H7a6qdgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6qtgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeN5UNZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_H7a6q9gBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6rNgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeN5UNZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_H7a6rtgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6r9gBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgY9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_H7a6sNgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6sdgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgY9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_H7a6stgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6s9gBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgY9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_H7a6tNgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6tdgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgY9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_H7a6ttgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6t9gBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgY9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_H7a6udgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6utgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgZ9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:NullCountIndicator" xmi:id="_H7a6u9gBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6vNgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgZ9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Null_Count_0.1.definition#_GrAeADh9Ed2XmO7pl5Yuyg"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DistinctCountIndicator" xmi:id="_H7a6vdgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6vtgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgZ9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:UniqueCountIndicator" xmi:id="_H7a6v9gBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6wNgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgZ9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:DuplicateCountIndicator" xmi:id="_H7a6wdgBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6wtgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgZ9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:BlankCountIndicator" xmi:id="_H7a6w9gBEe6W3qq2lX1hOQ">
+        <parameters xmi:id="_H7a6xNgBEe6W3qq2lX1hOQ"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_JeOgZ9ZwEe6_lrqJSTp5Zg"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Blank_Count_0.1.definition#_ccHq0xF2Ed2PKb6nEJEvhw"/>
+      </indicators>
+    </results>
+    <parameters xmi:id="_H0qLWdgBEe6W3qq2lX1hOQ" dataFilter="_IMPlctgBEe6W3qq2lX1hOQ" analysisType="Multiple Column Analysis"/>
+    <contextType xmi:id="_H7aTkNgBEe6W3qq2lX1hOQ" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_IMPlctgBEe6W3qq2lX1hOQ" name="ca_products_report">
+    <ranges xmi:id="_IMQL8NgBEe6W3qq2lX1hOQ">
+      <expressions xmi:id="_IMQL8dgBEe6W3qq2lX1hOQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_IMQL8tgBEe6W3qq2lX1hOQ" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
