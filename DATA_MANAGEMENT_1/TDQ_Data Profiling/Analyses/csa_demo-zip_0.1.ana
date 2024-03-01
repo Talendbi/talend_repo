@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_yjPQdtgVEe6W3qq2lX1hOQ" name="csa_demo-zip" creationDate="2024-03-01T13:50:58.168-0800">
-  <taggedValue xmi:id="_yjPQd9gVEe6W3qq2lX1hOQ" tag="Status" value="development"/>
-  <taggedValue xmi:id="_yjP2oNgVEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
-  <taggedValue xmi:id="_yjP2odgVEe6W3qq2lX1hOQ" tag="Purpose"/>
-  <taggedValue xmi:id="_yjP2otgVEe6W3qq2lX1hOQ" tag="Description"/>
-  <taggedValue xmi:id="_yjP2o9gVEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
-  <context xmi:id="_yjP2pNgVEe6W3qq2lX1hOQ"/>
-  <results xmi:id="_yjP2pdgVEe6W3qq2lX1hOQ">
-    <resultMetadata xmi:id="_yjP2ptgVEe6W3qq2lX1hOQ"/>
-    <indicators xsi:type="dataquality.indicators.columnset:SimpleStatIndicator" xmi:id="_yjP2p9gVEe6W3qq2lX1hOQ">
-      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Multiple_Column_Simple_Statistics_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTg"/>
-      <rowCountIndicator xmi:id="_yjP2qNgVEe6W3qq2lX1hOQ"/>
-      <uniqueCountIndicator xmi:id="_yjP2qdgVEe6W3qq2lX1hOQ"/>
-      <distinctCountIndicator xmi:id="_yjP2qtgVEe6W3qq2lX1hOQ"/>
-      <duplicateCountIndicator xmi:id="_yjP2q9gVEe6W3qq2lX1hOQ"/>
-    </indicators>
-  </results>
-  <parameters xmi:id="_yjP2rNgVEe6W3qq2lX1hOQ" analysisType="Column Set Analysis"/>
-</dataquality.analysis:Analysis>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.domain="http://dataquality.domain" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010">
+  <dataquality.analysis:Analysis xmi:id="_yjPQdtgVEe6W3qq2lX1hOQ" name="csa_demo-zip" creationDate="2024-03-01T13:50:58.168-0800" defaultContext="Default">
+    <clientDependency href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_Lqt8ENfvEe6W3qq2lX1hOQ"/>
+    <taggedValue xmi:id="_yjPQd9gVEe6W3qq2lX1hOQ" tag="Status" value="development"/>
+    <taggedValue xmi:id="_yjP2oNgVEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
+    <taggedValue xmi:id="_yjP2odgVEe6W3qq2lX1hOQ" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_yjP2otgVEe6W3qq2lX1hOQ" tag="Description" value=""/>
+    <taggedValue xmi:id="_yjP2o9gVEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_yq7L8dgVEe6W3qq2lX1hOQ" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+    <taggedValue xmi:id="_yq7L8tgVEe6W3qq2lX1hOQ" tag="PREVIEW_ROW_NUMBER" value="50"/>
+    <taggedValue xmi:id="_yq7zANgVEe6W3qq2lX1hOQ" tag="Is Use Sample Data" value="false"/>
+    <taggedValue xmi:id="_yq7zAdgVEe6W3qq2lX1hOQ" tag="NUMBER_OF_CONNECTIONS_PER_ANALYSIS" value="5"/>
+    <context xmi:id="_yjP2pNgVEe6W3qq2lX1hOQ">
+      <connection href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#__ATI8NZvEe6_lrqJSTp5Zg"/>
+      <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_I9Ol_NgVEe6W3qq2lX1hOQ"/>
+    </context>
+    <results xmi:id="_yjP2pdgVEe6W3qq2lX1hOQ">
+      <resultMetadata xmi:id="_yjP2ptgVEe6W3qq2lX1hOQ"/>
+      <indicators xsi:type="dataquality.indicators.columnset:SimpleStatIndicator" xmi:id="_yjP2p9gVEe6W3qq2lX1hOQ">
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Multiple_Column_Simple_Statistics_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTg"/>
+        <analyzedColumns xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_I9Ol_NgVEe6W3qq2lX1hOQ"/>
+        <rowCountIndicator xmi:id="_yjP2qNgVEe6W3qq2lX1hOQ">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Row_Count_0.1.definition#_ccFOkBF2Ed2PKb6nEJEvhw"/>
+        </rowCountIndicator>
+        <uniqueCountIndicator xmi:id="_yjP2qdgVEe6W3qq2lX1hOQ">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Unique_Count_0.1.definition#_ccHq0RF2Ed2PKb6nEJEvhw"/>
+        </uniqueCountIndicator>
+        <distinctCountIndicator xmi:id="_yjP2qtgVEe6W3qq2lX1hOQ">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Distinct_Count_0.1.definition#_ccHq0BF2Ed2PKb6nEJEvhw"/>
+        </distinctCountIndicator>
+        <duplicateCountIndicator xmi:id="_yjP2q9gVEe6W3qq2lX1hOQ">
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Duplicate_Count_0.1.definition#_ccHq0hF2Ed2PKb6nEJEvhw"/>
+        </duplicateCountIndicator>
+      </indicators>
+    </results>
+    <parameters xmi:id="_yjP2rNgVEe6W3qq2lX1hOQ" dataFilter="_y7n7U9gVEe6W3qq2lX1hOQ" analysisType="Column Set Analysis"/>
+    <contextType xmi:id="_yq7L8NgVEe6W3qq2lX1hOQ" confirmationNeeded="false" hide="false" name="Default"/>
+  </dataquality.analysis:Analysis>
+  <dataquality.domain:Domain xmi:id="_y7n7U9gVEe6W3qq2lX1hOQ" name="csa_demo-zip">
+    <ranges xmi:id="_y7n7VNgVEe6W3qq2lX1hOQ">
+      <expressions xmi:id="_y7n7VdgVEe6W3qq2lX1hOQ">
+        <expression xsi:type="relational:TdExpression" xmi:id="_y7n7VtgVEe6W3qq2lX1hOQ" body="" language="SQL"/>
+      </expressions>
+    </ranges>
+  </dataquality.domain:Domain>
+</xmi:XMI>
