@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_E3914NfvEe6W3qq2lX1hOQ" name="Ma1" creationDate="2024-03-01T09:13:50.669-0800">
+  <taggedValue xmi:id="_E3-c8NfvEe6W3qq2lX1hOQ" tag="PREVIEW_ROW_NUMBER" value="10000"/>
+  <taggedValue xmi:id="_E3-c8dfvEe6W3qq2lX1hOQ" tag="Status" value="development"/>
+  <taggedValue xmi:id="_E3-c8tfvEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
+  <taggedValue xmi:id="_E3-c89fvEe6W3qq2lX1hOQ" tag="Purpose"/>
+  <taggedValue xmi:id="_E3-c9NfvEe6W3qq2lX1hOQ" tag="Description"/>
+  <taggedValue xmi:id="_E3-c9dfvEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
+  <context xmi:id="_E3-c9tfvEe6W3qq2lX1hOQ"/>
+  <results xmi:id="_E3-c99fvEe6W3qq2lX1hOQ">
+    <resultMetadata xmi:id="_E3-c-NfvEe6W3qq2lX1hOQ"/>
+    <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_E3_EANfvEe6W3qq2lX1hOQ"/>
+    <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_E3_EAdfvEe6W3qq2lX1hOQ">
+      <builtInMatchRuleDefinition xmi:id="_E3_EAtfvEe6W3qq2lX1hOQ"/>
+    </indicators>
+  </results>
+  <parameters xmi:id="_E3_EA9fvEe6W3qq2lX1hOQ" analysisType="Match Analysis"/>
+</dataquality.analysis:Analysis>
