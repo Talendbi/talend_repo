@@ -17,7 +17,7 @@
       <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
     </context>
     <results xmi:id="_86pEF9gcEe6yz69LmhkiYw">
-      <resultMetadata xmi:id="_86pEGNgcEe6yz69LmhkiYw" executionDate="2024-03-01T14:44:41.336-0800" executionDuration="851" message="" executionNumber="1" lastRunOk="true" lastExecutionNumberOk="1"/>
+      <resultMetadata xmi:id="_86pEGNgcEe6yz69LmhkiYw" executionDate="2024-03-01T14:46:24.198-0800" executionDuration="863" message="" executionNumber="2" lastRunOk="true" lastExecutionNumberOk="2"/>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_9L4lHNgcEe6yz69LmhkiYw" count="20" computed="true">
         <parameters xmi:id="_9L4lHdgcEe6yz69LmhkiYw"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
@@ -85,6 +85,84 @@
           <sqlGenericExpression xmi:id="_SqIPWdgdEe6yz69LmhkiYw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
       </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_h2g58NgdEe6yz69LmhkiYw" count="20" computed="true" sumStr="60">
+        <parameters xmi:id="_h2g58dgdEe6yz69LmhkiYw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_l9cNgdEe6yz69LmhkiYw" body="SELECT SUM(&quot;REGION_ID&quot;), COUNT(&quot;REGION_ID&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+        <builtInIndicatorDefinition xmi:id="_h-1vgNgdEe6yz69LmhkiYw" name="Mean" label="Mean">
+          <taggedValue xmi:id="_h-1vgdgdEe6yz69LmhkiYw" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_h-1vgtgdEe6yz69LmhkiYw" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_h-1vg9gdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_h-1vhNgdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_h-1vhdgdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_h-1vhtgdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_h-1vh9gdEe6yz69LmhkiYw" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_h-1viNgdEe6yz69LmhkiYw" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:IQRIndicator" xmi:id="_h2g58tgdEe6yz69LmhkiYw" computed="true">
+        <parameters xmi:id="_h2g589gdEe6yz69LmhkiYw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Inter_Quartile_Range_0.1.definition#_ccI48xF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xsi:type="dataquality.indicators:LowerQuartileIndicator" xmi:id="_h2g59NgdEe6yz69LmhkiYw" count="20" computed="true" value="2.0" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Lower_Quartile_0.1.definition#_ccI49BF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_tSMNgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &quot;REGION_ID&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h-6oANgdEe6yz69LmhkiYw" name="Lower Quartile" label="Lower Quartile">
+            <taggedValue xmi:id="_h-6oAdgdEe6yz69LmhkiYw" tag="Description" value="1/4th of the records are below this value and 3/4th are above"/>
+            <taggedValue xmi:id="_h-6oAtgdEe6yz69LmhkiYw" tag="Purpose" value="indiquates the threshold of the lowest 1/4th records"/>
+            <sqlGenericExpression xmi:id="_h-6oA9gdEe6yz69LmhkiYw" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  3* SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) AND  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= 3*(SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+            <sqlGenericExpression xmi:id="_h-6oBNgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_h-6oBdgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_h-6oBtgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, ROW_NUMBER() OVER(ORDER BY &lt;%=__COLUMN_NAMES__%>) AS NUMBER FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ) T1 WHERE (NUMBER =  INTEGER((SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>) /4) +1) " language="DB2"/>
+            <sqlGenericExpression xmi:id="_h-6oB9gdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_h-6oCNgdEe6yz69LmhkiYw" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR ORDER BY &lt;%=__COLUMN_NAMES__%> ASC " language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_h-6oCdgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xsi:type="dataquality.indicators:UpperQuartileIndicator" xmi:id="_h2g59dgdEe6yz69LmhkiYw" count="20" computed="true" value="4.0" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Upper_Quartile_0.1.definition#_ccI49RF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_yKsNgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY &quot;REGION_ID&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h--5cNgdEe6yz69LmhkiYw" name="Upper Quartile" label="Upper Quartile">
+            <taggedValue xmi:id="_h--5cdgdEe6yz69LmhkiYw" tag="Description" value="1/4th of the records are above this value and 3/4th are below"/>
+            <taggedValue xmi:id="_h--5ctgdEe6yz69LmhkiYw" tag="Purpose" value="indiquates the threshold of the highest 1/4th records"/>
+            <sqlGenericExpression xmi:id="_h--5c9gdEe6yz69LmhkiYw" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= 3*( SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) ) AND 3 * SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)  &lt;= ( SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+            <sqlGenericExpression xmi:id="_h--5dNgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_h--5ddgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_h--5dtgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, ROW_NUMBER() OVER(ORDER BY &lt;%=__COLUMN_NAMES__%>) AS NUMBER FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ) T1 WHERE ( NUMBER =  INTEGER((SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>)*3 /4) +1 ) " language="DB2"/>
+            <sqlGenericExpression xmi:id="_h--5d9gdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_h--5eNgdEe6yz69LmhkiYw" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR ORDER BY &lt;%=__COLUMN_NAMES__%> ASC " language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_h--5edgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_h2g59tgdEe6yz69LmhkiYw" computed="true">
+        <parameters xmi:id="_h2g599gdEe6yz69LmhkiYw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_h2g5-NgdEe6yz69LmhkiYw" count="20" computed="true" value="1" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_yKsdgdEe6yz69LmhkiYw" body="SELECT MIN(&quot;REGION_ID&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h_DK4NgdEe6yz69LmhkiYw" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_h_DK4dgdEe6yz69LmhkiYw" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_h_DK4tgdEe6yz69LmhkiYw" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_h_DK49gdEe6yz69LmhkiYw" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_h2g5-dgdEe6yz69LmhkiYw" count="20" computed="true" value="5" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_yKstgdEe6yz69LmhkiYw" body="SELECT MAX(&quot;REGION_ID&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h_G1QNgdEe6yz69LmhkiYw" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_h_G1QdgdEe6yz69LmhkiYw" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_h_G1QtgdEe6yz69LmhkiYw" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_h_G1Q9gdEe6yz69LmhkiYw" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
       <indicators xsi:type="dataquality.indicators:RowCountIndicator" xmi:id="_9L4lPdgcEe6yz69LmhkiYw" count="20" computed="true">
         <parameters xmi:id="_9L4lPtgcEe6yz69LmhkiYw"/>
         <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
@@ -151,6 +229,84 @@
           <sqlGenericExpression xmi:id="_Sqh3-NgdEe6yz69LmhkiYw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) mycount FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) AS myquery" language="Adaptive Server Enterprise | Sybase Adaptive Server IQ"/>
           <sqlGenericExpression xmi:id="_Sqh3-dgdEe6yz69LmhkiYw" body="SELECT COUNT(*) FROM (SELECT &lt;%=__COLUMN_NAMES__%>, COUNT(*) FROM &lt;%=__TABLE_NAME__%>  m &lt;%=__WHERE_CLAUSE__%> GROUP BY &lt;%=__COLUMN_NAMES__%> HAVING COUNT(*) > 1) myquery" language="Hive"/>
         </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:MeanIndicator" xmi:id="_h2g5-tgdEe6yz69LmhkiYw" count="20" computed="true" sumStr="21520">
+        <parameters xmi:id="_h2g5-9gdEe6yz69LmhkiYw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Mean_0.1.definition#_ccI48RF2Ed2PKb6nEJEvhw"/>
+        <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_yKs9gdEe6yz69LmhkiYw" body="SELECT SUM(&quot;TOTAL_PRICE&quot;), COUNT(&quot;TOTAL_PRICE&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+        <builtInIndicatorDefinition xmi:id="_h_M74NgdEe6yz69LmhkiYw" name="Mean" label="Mean">
+          <taggedValue xmi:id="_h_M74dgdEe6yz69LmhkiYw" tag="Description" value="computes the mean (average) of the records"/>
+          <taggedValue xmi:id="_h_M74tgdEe6yz69LmhkiYw" tag="Purpose" value="evaluates the mean value of numerical records"/>
+          <sqlGenericExpression xmi:id="_h_M749gdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          <sqlGenericExpression xmi:id="_h_M75NgdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="MySQL"/>
+          <sqlGenericExpression xmi:id="_h_M75dgdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+          <sqlGenericExpression xmi:id="_h_M75tgdEe6yz69LmhkiYw" body="SELECT SUM(&lt;%=__COLUMN_NAMES__%>), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="PostgreSQL"/>
+          <sqlGenericExpression xmi:id="_h_M759gdEe6yz69LmhkiYw" body="SELECT SUM(CAST (&lt;%=__COLUMN_NAMES__%> AS REAL)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Teradata"/>
+          <sqlGenericExpression xmi:id="_h_M76NgdEe6yz69LmhkiYw" body="SELECT SUM(double(&lt;%=__COLUMN_NAMES__%>)), COUNT(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="DB2"/>
+        </builtInIndicatorDefinition>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:IQRIndicator" xmi:id="_h2g5_NgdEe6yz69LmhkiYw" computed="true">
+        <parameters xmi:id="_h2g5_dgdEe6yz69LmhkiYw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Inter_Quartile_Range_0.1.definition#_ccI48xF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xsi:type="dataquality.indicators:LowerQuartileIndicator" xmi:id="_h2g5_tgdEe6yz69LmhkiYw" count="20" computed="true" value="157.5" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Lower_Quartile_0.1.definition#_ccI49BF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_0m8NgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &quot;TOTAL_PRICE&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h_SbcNgdEe6yz69LmhkiYw" name="Lower Quartile" label="Lower Quartile">
+            <taggedValue xmi:id="_h_SbcdgdEe6yz69LmhkiYw" tag="Description" value="1/4th of the records are below this value and 3/4th are above"/>
+            <taggedValue xmi:id="_h_SbctgdEe6yz69LmhkiYw" tag="Purpose" value="indiquates the threshold of the lowest 1/4th records"/>
+            <sqlGenericExpression xmi:id="_h_Sbc9gdEe6yz69LmhkiYw" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  3* SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= (SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) AND  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= 3*(SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) +  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+            <sqlGenericExpression xmi:id="_h_SbdNgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_h_SbddgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_h_SbdtgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, ROW_NUMBER() OVER(ORDER BY &lt;%=__COLUMN_NAMES__%>) AS NUMBER FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ) T1 WHERE (NUMBER =  INTEGER((SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>) /4) +1) " language="DB2"/>
+            <sqlGenericExpression xmi:id="_h_Sbd9gdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_h_SbeNgdEe6yz69LmhkiYw" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR ORDER BY &lt;%=__COLUMN_NAMES__%> ASC " language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_h_SbedgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.25) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xsi:type="dataquality.indicators:UpperQuartileIndicator" xmi:id="_h2g5_9gdEe6yz69LmhkiYw" count="20" computed="true" value="1650.0" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Upper_Quartile_0.1.definition#_ccI49RF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_1OANgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY &quot;TOTAL_PRICE&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h_XT8NgdEe6yz69LmhkiYw" name="Upper Quartile" label="Upper Quartile">
+            <taggedValue xmi:id="_h_XT8dgdEe6yz69LmhkiYw" tag="Description" value="1/4th of the records are above this value and 3/4th are below"/>
+            <taggedValue xmi:id="_h_XT8tgdEe6yz69LmhkiYw" tag="Purpose" value="indiquates the threshold of the highest 1/4th records"/>
+            <sqlGenericExpression xmi:id="_h_XT89gdEe6yz69LmhkiYw" body="SELECT AVG(DISTINCT &lt;%=__COLUMN_NAMES__%>) FROM (SELECT a.&lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> a, &lt;%=__TABLE_NAME__%> b WHERE a.&lt;%=__COLUMN_NAMES__%> IS NOT NULL AND b.&lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> GROUP BY a.&lt;%=__COLUMN_NAMES__%> HAVING  SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) &lt;= 3*( SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END) ) AND 3 * SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> > a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)  &lt;= ( SUM(CASE WHEN a.&lt;%=__COLUMN_NAMES__%> = b.&lt;%=__COLUMN_NAMES__%> THEN 1 ELSE 0 END) + SUM(CASE WHEN  b.&lt;%=__COLUMN_NAMES__%> &lt; a.&lt;%=__COLUMN_NAMES__%>   THEN 1 ELSE 0 END)) ) T" language="SQL"/>
+            <sqlGenericExpression xmi:id="_h_XT9NgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_OFFSET__%>,&lt;%=__LIMIT_ROW__%>" language="MySQL"/>
+            <sqlGenericExpression xmi:id="_h_XT9dgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Oracle"/>
+            <sqlGenericExpression xmi:id="_h_XT9tgdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM ( SELECT &lt;%=__COLUMN_NAMES__%>, ROW_NUMBER() OVER(ORDER BY &lt;%=__COLUMN_NAMES__%>) AS NUMBER FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ) T1 WHERE ( NUMBER =  INTEGER((SELECT COUNT(*) FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%>)*3 /4) +1 ) " language="DB2"/>
+            <sqlGenericExpression xmi:id="_h_XT99gdEe6yz69LmhkiYw" body="SELECT &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> LIMIT &lt;%=__LIMIT_ROW__%> OFFSET &lt;%=__LIMIT_OFFSET__%>" language="PostgreSQL"/>
+            <sqlGenericExpression xmi:id="_h_XT-NgdEe6yz69LmhkiYw" body="SELECT * FROM (SELECT TOP &lt;%=__LIMIT_ROW__%> &lt;%=__COLUMN_NAMES__%> FROM (SELECT TOP &lt;%=__LIMIT_ROW_PLUS_OFFSET__%> &lt;%=__COLUMN_NAMES__%> FROM &lt;%=__TABLE_NAME__%> WHERE &lt;%=__COLUMN_NAMES__%> IS NOT NULL &lt;%=__AND_WHERE_CLAUSE__%> ORDER BY &lt;%=__COLUMN_NAMES__%> ASC ) AS FOO ORDER BY &lt;%=__COLUMN_NAMES__%> DESC ) AS BAR ORDER BY &lt;%=__COLUMN_NAMES__%> ASC " language="Microsoft SQL Server"/>
+            <sqlGenericExpression xmi:id="_h_XT-dgdEe6yz69LmhkiYw" body=" SELECT PERCENTILE_CONT(0.75) WITHIN GROUP (ORDER BY &lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="Snowflake"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
+      </indicators>
+      <indicators xsi:type="dataquality.indicators:RangeIndicator" xmi:id="_h2g6ANgdEe6yz69LmhkiYw" computed="true">
+        <parameters xmi:id="_h2g6AdgdEe6yz69LmhkiYw"/>
+        <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+        <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Range_0.1.definition#_ccI49hF2Ed2PKb6nEJEvhw"/>
+        <lowerValue xmi:id="_h2g6AtgdEe6yz69LmhkiYw" count="20" computed="true" value="30" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Minimum_0.1.definition#_ccJgABF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_1OAdgdEe6yz69LmhkiYw" body="SELECT MIN(&quot;TOTAL_PRICE&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h_cMcNgdEe6yz69LmhkiYw" name="Minimum" label="Minimum">
+            <taggedValue xmi:id="_h_cMcdgdEe6yz69LmhkiYw" tag="Description" value="gives the minimal record"/>
+            <taggedValue xmi:id="_h_cMctgdEe6yz69LmhkiYw" tag="Purpose" value="evaluates the minimal record"/>
+            <sqlGenericExpression xmi:id="_h_cMc9gdEe6yz69LmhkiYw" body="SELECT MIN(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </lowerValue>
+        <upperValue xmi:id="_h2g6A9gdEe6yz69LmhkiYw" count="20" computed="true" value="5000" datatype="2">
+          <analyzedElement xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+          <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Summary Statistics/Maximum_0.1.definition#_ccJgARF2Ed2PKb6nEJEvhw"/>
+          <instantiatedExpressions xsi:type="relational:TdExpression" xmi:id="_h_1OAtgdEe6yz69LmhkiYw" body="SELECT MAX(&quot;TOTAL_PRICE&quot;) FROM &quot;DEMO_USER&quot;.&quot;SALES&quot; " language="Oracle"/>
+          <builtInIndicatorDefinition xmi:id="_h_iTENgdEe6yz69LmhkiYw" name="Maximum" label="Maximum">
+            <taggedValue xmi:id="_h_iTEdgdEe6yz69LmhkiYw" tag="Description" value="gives the maximal record"/>
+            <taggedValue xmi:id="_h_iTEtgdEe6yz69LmhkiYw" tag="Purpose" value="evaluates the maximal record"/>
+            <sqlGenericExpression xmi:id="_h_iTE9gdEe6yz69LmhkiYw" body="SELECT MAX(&lt;%=__COLUMN_NAMES__%>) FROM &lt;%=__TABLE_NAME__%> &lt;%=__WHERE_CLAUSE__%>" language="SQL"/>
+          </builtInIndicatorDefinition>
+        </upperValue>
       </indicators>
     </results>
     <parameters xmi:id="_86pEGdgcEe6yz69LmhkiYw" dataFilter="_9Xn7ANgcEe6yz69LmhkiYw" analysisType="Multiple Column Analysis"/>
