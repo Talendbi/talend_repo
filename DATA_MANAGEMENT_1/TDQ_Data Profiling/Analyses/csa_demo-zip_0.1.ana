@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_yjPQdtgVEe6W3qq2lX1hOQ" name="csa_demo-zip" creationDate="2024-03-01T13:50:58.168-0800">
+  <taggedValue xmi:id="_yjPQd9gVEe6W3qq2lX1hOQ" tag="Status" value="development"/>
+  <taggedValue xmi:id="_yjP2oNgVEe6W3qq2lX1hOQ" tag="Author" value="developer@company.com"/>
+  <taggedValue xmi:id="_yjP2odgVEe6W3qq2lX1hOQ" tag="Purpose"/>
+  <taggedValue xmi:id="_yjP2otgVEe6W3qq2lX1hOQ" tag="Description"/>
+  <taggedValue xmi:id="_yjP2o9gVEe6W3qq2lX1hOQ" tag="Version" value="0.1"/>
+  <context xmi:id="_yjP2pNgVEe6W3qq2lX1hOQ"/>
+  <results xmi:id="_yjP2pdgVEe6W3qq2lX1hOQ">
+    <resultMetadata xmi:id="_yjP2ptgVEe6W3qq2lX1hOQ"/>
+    <indicators xsi:type="dataquality.indicators.columnset:SimpleStatIndicator" xmi:id="_yjP2p9gVEe6W3qq2lX1hOQ">
+      <indicatorDefinition href="../../TDQ_Libraries/Indicators/System Indicators/Simple Statistics/Multiple_Column_Simple_Statistics_0.1.definition#_JoeMkM-jEd6qN5aKpPNGTg"/>
+      <rowCountIndicator xmi:id="_yjP2qNgVEe6W3qq2lX1hOQ"/>
+      <uniqueCountIndicator xmi:id="_yjP2qdgVEe6W3qq2lX1hOQ"/>
+      <distinctCountIndicator xmi:id="_yjP2qtgVEe6W3qq2lX1hOQ"/>
+      <duplicateCountIndicator xmi:id="_yjP2q9gVEe6W3qq2lX1hOQ"/>
+    </indicators>
+  </results>
+  <parameters xmi:id="_yjP2rNgVEe6W3qq2lX1hOQ" analysisType="Column Set Analysis"/>
+</dataquality.analysis:Analysis>
