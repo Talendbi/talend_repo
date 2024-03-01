@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmi:id="_0NOykNgdEe6yz69LmhkiYw" name="matchAnalysis_Sales" creationDate="2024-03-01T14:48:25.304-0800">
+<dataquality.analysis:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dataquality.analysis="http://dataquality.analysis" xmlns:dataquality.indicators.columnset="http://dataquality.indicators.columnset" xmlns:relational="http://www.talend.org/cwm/resource/relational/2010" xmi:id="_0NOykNgdEe6yz69LmhkiYw" name="matchAnalysis_Sales" creationDate="2024-03-01T14:48:25.304-0800" defaultContext="Default">
+  <clientDependency href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_Lqt8ENfvEe6W3qq2lX1hOQ"/>
   <taggedValue xmi:id="_0NOykdgdEe6yz69LmhkiYw" tag="PREVIEW_ROW_NUMBER" value="10000"/>
   <taggedValue xmi:id="_0NOyktgdEe6yz69LmhkiYw" tag="Status" value="development"/>
   <taggedValue xmi:id="_0NOyk9gdEe6yz69LmhkiYw" tag="Author" value="developer@company.com"/>
-  <taggedValue xmi:id="_0NOylNgdEe6yz69LmhkiYw" tag="Purpose"/>
-  <taggedValue xmi:id="_0NOyldgdEe6yz69LmhkiYw" tag="Description"/>
+  <taggedValue xmi:id="_0NOylNgdEe6yz69LmhkiYw" tag="Purpose" value=""/>
+  <taggedValue xmi:id="_0NOyldgdEe6yz69LmhkiYw" tag="Description" value=""/>
   <taggedValue xmi:id="_0NOyltgdEe6yz69LmhkiYw" tag="Version" value="0.1"/>
-  <context xmi:id="_0NOyl9gdEe6yz69LmhkiYw"/>
+  <taggedValue xmi:id="_0V60gNgdEe6yz69LmhkiYw" tag="TEMP_DATA_DIR" value=""/>
+  <taggedValue xmi:id="_0V60gdgdEe6yz69LmhkiYw" tag="MAX_BUFFER_SIZE" value="200000"/>
+  <taggedValue xmi:id="_0V60gtgdEe6yz69LmhkiYw" tag="STORE_ON_DISK" value="false"/>
+  <taggedValue xmi:id="_0WElgNgdEe6yz69LmhkiYw" tag="DRILL_DOWN" value="true"/>
+  <taggedValue xmi:id="_0Zd3wdgdEe6yz69LmhkiYw" tag="ANA_LAST_RUN_CONTEXT" value="Default"/>
+  <context xmi:id="_0NOyl9gdEe6yz69LmhkiYw">
+    <connection href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#__ATI8NZvEe6_lrqJSTp5Zg"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHMNgcEe6yz69LmhkiYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHNNgcEe6yz69LmhkiYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHONgcEe6yz69LmhkiYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHPNgcEe6yz69LmhkiYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHQNgcEe6yz69LmhkiYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHRNgcEe6yz69LmhkiYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHSNgcEe6yz69LmhkiYw"/>
+    <analysedElements xsi:type="relational:TdColumn" href="../../metadata/connections/oracle_talend_34_47_244_0.1.item#_nuAHTNgcEe6yz69LmhkiYw"/>
+  </context>
   <results xmi:id="_0NOymNgdEe6yz69LmhkiYw">
     <resultMetadata xmi:id="_0NOymdgdEe6yz69LmhkiYw"/>
     <indicators xsi:type="dataquality.indicators.columnset:BlockKeyIndicator" xmi:id="_0NOymtgdEe6yz69LmhkiYw"/>
     <indicators xsi:type="dataquality.indicators.columnset:RecordMatchingIndicator" xmi:id="_0NOym9gdEe6yz69LmhkiYw">
-      <builtInMatchRuleDefinition xmi:id="_0NOynNgdEe6yz69LmhkiYw"/>
+      <builtInMatchRuleDefinition xmi:id="_0NOynNgdEe6yz69LmhkiYw">
+        <matchRules xmi:id="_0S7x8NgdEe6yz69LmhkiYw" name="Match Rule 1"/>
+      </builtInMatchRuleDefinition>
     </indicators>
   </results>
   <parameters xmi:id="_0NOyndgdEe6yz69LmhkiYw" analysisType="Match Analysis"/>
+  <contextType xmi:id="_0Zd3wNgdEe6yz69LmhkiYw" confirmationNeeded="false" hide="false" name="Default"/>
 </dataquality.analysis:Analysis>
