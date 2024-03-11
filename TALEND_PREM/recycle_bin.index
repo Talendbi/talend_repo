@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <recyclebin:RecycleBin xmlns:recyclebin="http://www.talend.org/recyclebin">
+  <deletedFolders>process/DEMO/talend_demo</deletedFolders>
   <deletedItems id="_7qKnwNW4Ee6uTfdQ72GLsQ" path="DEMO" type="PROCESS"/>
 </recyclebin:RecycleBin>
