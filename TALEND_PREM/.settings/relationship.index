@@ -70,4 +70,23 @@
     "version" : "Latest",
     "type" : "schema"
   } ]
+}, {
+  "baseItem" : {
+    "id" : "_bWN5QNX6Ee6mno2ToZ9eBg",
+    "version" : "0.2",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_v6RqgNT6Ee6uTfdQ72GLsQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_v6RqgNT6Ee6uTfdQ72GLsQ - PRODUCTS",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_v6RqgNT6Ee6uTfdQ72GLsQ - PRODUCTS_REPORT",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
 } ]
